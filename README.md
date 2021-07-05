@@ -4,7 +4,7 @@ Projeto que simula uma loja listando seus produtos, onde o usuário poderá mani
 
 ## Preview
 
-Live preview disponível no [Heroku](https://lojabacana.herokuapp.com/):
+Live preview disponível no [Heroku](https://lojabacana.herokuapp.com/).
 
 ## Como rodar?
 
