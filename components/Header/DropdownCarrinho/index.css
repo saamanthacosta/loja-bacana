@@ -1,0 +1,116 @@
+
+.container_dropdown {
+    width: 95%;
+    position: absolute;
+    top: 10%;
+  }
+
+.lighter-text {
+    color: #ABB0BE;
+  }
+
+  .dropdown_carrinho .dropdown_carrinho_header {
+    border-bottom: 1px solid #E8E8E8;
+    padding-bottom: 15px;
+  }
+
+  .dropdown_carrinho .dropdown_carrinho_header .dropdown_carrinho_total {
+    float: right;
+  }
+
+  .dropdown_carrinho_items {
+    padding: 0px;
+  }
+
+  .dropdown_carrinho .dropdown_carrinho_items {
+    padding-top: 20px;
+  }
+  .dropdown_carrinho .dropdown_carrinho_items li {
+    list-style: none;
+    margin-bottom: 18px;
+  }
+  .dropdown_carrinho .dropdown_carrinho_items .dropdown_produto_imagem {
+    float: left;
+    margin-right: 12px;
+  }
+
+
+
+  .dropdown_carrinho .dropdown_carrinho_items .dropdown_produto_nome {
+    display: block;
+    padding-top: 5px;
+    font-size: 16px;
+  }
+
+  .dropdown_produto_nome {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .dropdown_carrinho .dropdown_carrinho_items .dropdown_produto_preco {
+    color: rgb(204, 0, 0);
+    margin-right: 8px;
+  }
+
+  .dropdown_carrinho .dropdown_carrinho_items .dropdown_produto_quantidade {
+    display: block;
+    color: gray;
+}
+
+.dropdown_carrinho {
+    margin: 50px 0;
+    float: right;
+    background: white;
+    width: 350px;
+    position: relative;
+    border-radius: 3px;
+    padding: 20px;
+    min-height: 350px;
+  }
+
+  .dropdown_carrinho:after {
+      bottom: 100%;
+      left: 89%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-bottom-color: white;
+      border-width: 8px;
+      margin-left: -8px;
+  }
+  
+  .botao_dropdown {
+    background: rgb(204, 0, 0);
+    color:white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: 25px 0 15px 0;
+  }
+
+  .botao_dropdown:hover {
+    background: lighten(#ff4848, 3%);
+    color:white;
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+@media (max-width: 66rem) {
+  .container_dropdown {
+      top: 20%;
+  }
+  }
+  
+  

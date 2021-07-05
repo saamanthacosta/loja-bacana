@@ -1,0 +1,73 @@
+
+.modalWrapper {
+    display: flex;
+    background: rgba(0, 0, 0, 0.66);
+    position: fixed;
+    align-items: center;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+  }
+
+  .corpo_modal {
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 1%;
+  }
+
+  .modal_detalhes {
+    padding: 24px;
+    background: #FFF;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .modal_detalhes .modal_nome {
+    font-size: 20px;
+  }
+
+  .modal_detalhes .modal_preco {
+    color: rgb(204, 0, 0);
+    font-weight: bold;
+    font-size: 24px;
+    float: right;
+  }
+
+  .botao_modal {
+    background: rgb(204, 0, 0);
+    color:white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    border-radius: 3px;
+    font-size: 16px;
+    width: 20%;
+    float: right;
+    border: none;
+  }
+
+  .botao_modal:hover {
+    background: rgb(148, 0, 0);
+    transition: 0.8s;
+  }
+  
+  
+  @media (min-width: 40rem) {
+  .corpo_modal {
+      width: 50%;
+  }
+  }
+  @media (min-width: 60rem) {
+  .corpo_modal {
+      width: 40%;
+  }
+  }
+  
+  @media (min-width: 88rem) {
+      .corpo_modal {
+          width: 30%;
+      }
+    }

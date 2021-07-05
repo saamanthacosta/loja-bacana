@@ -1,47 +1,55 @@
-# TypeScript Next.js example
+# Loja Bacana
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+Projeto que simula uma loja listando seus produtos, onde o usuário poderá manipular seu carrinho - adicionar itens, escolher a quantidade de cada um, removê-los do carrinho e até o limpar completamente. 
 
 ## Preview
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+Live preview disponível no [Heroku]():
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript)
+## Como rodar?
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
-
-## How to use it?
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+Clone o projeto e execute o seguinte comando para instalar suas dependências:
 
 ```bash
-npx create-next-app --example with-typescript with-typescript-app
+npm install
 # or
-yarn create next-app --example with-typescript with-typescript-app
+yarn install
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Assim que a instalação finalizar, basta rodar o seguinte comando para que ele rode local na porta 3000:
 
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
+```bash
+npm run dev
+# or
+yarn run dev
 ```
 
-To enable TypeScript's features, we install the type declarations for React and Node.
+Para o seu desenvolvimento, foi utilizado a versão 12.13.0 do Node.
 
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
+## Dependências Utilizadas e suas motivações 
 
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
+### Typescript
 
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
+O Typescript é uma versão tipada do JavaScript. Além de facilitar o entendimento do código - e consequentemente, auxiliar na sua manutenção - o TS também ajuda no trabalho do desenvolvedor. Ele nos fornece informação para escrever um código mais limpo, organizado, seguindo padrões e permitindo que o código seja desenvolvido de maneira mais eficiente. 
 
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+Permite que a programação ocorra orientado a objetos, amplia o Intelisense do editor - autocomplete de código, exibe os parâmetros esperados e quaisquer descrições de métodos - e oferece uma maior segurança para o time - tudo isso devido a sua forte tipagem. 
+
+### Next.js
+Apesar de ser uma ótima biblioteca, o React possui muitos problemas com SEO - que é um conjunto de técnicas que tenta melhorar a posição de uma página no Google ou em qualquer outro mecanismo de busca. A fim de realizar server-side rendering (portanto, os dados são renderizados no lado do servidor), a biblioteca mais adotada pela comunidade do React é a Next.js
+
+Como o projeto engloba uma loja de e-commerce, seria essencial que a página aparecesse como uma das primeiras nos mecanismos de buscas. O conteúdo da página pode sofrer mudanças constantemente e seria interessante ter uma boa indexação dos dados no Google. 
+
+
+### Hooks
+Altamente utilizados pela comunidade React atualmente, o hook veio para facilitar a vida dos desenvolvedores no gerenciamento de estados. Antigamente, era necessário utilizar - e entender - o comportamento de outras bibliotecas, como Flux e Redux. A própria documentação React recomenda a utilização de hooks, ja que eles resolvem vários problemas como reutilização de lógica com estado entre componentes e a complexidade que alguns componentes ficavam. 
+Sem a utilização de hooks, ou qualquer biblioteca para gerenciamento de estados, era necessário usar o Higher-order components e render props, o que deixava o código muito verboso e perdia grande parte do seu isolamento de responsabilidade.
+Claro que isso não impede o funcionamento do hooks junto do redux - na verdade, surgiu o React Redux que engloba os novos hooks nativos da biblioteca React. Para esse projeto, entretanto, só foi utilizado o hooks, pois não havia a necessidade de tanto grau de comunicação entre os componentes.
+
+### Axios
+Axios é uma biblioteca que provê um cliente HTTP baseado em Promises para realizar requisições. Seu maior ponto de aderência é pelo suporte aos navegadores nativo, sem precisar instalar qualquer polyfill - enquanto para aumentar a compatibilidade do fetch é necessário instalar o whatwg-fetch. Ele também provê uma fácil implementação de timeout no objeto de configuração das requisições, conversão automática em JSON e interceptação de requisições com facilidade - através do interceptors. 
+
+### Bootstrap
+Bootstrap é uma biblioteca muito famosa com design limpo e com componentes já responsivos. Para auxiliar no desenvolvimento do layout, a biblioteca foi utilizada em alguns momentos.
+
+### React-Icons
+Biblioteca que facilitou o uso de icons de famosas bibliotecas de icons - como Bootstrap Icons, Font Awesome e Material Design icons. 

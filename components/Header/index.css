@@ -1,0 +1,32 @@
+.nome-da-loja {
+    color: rgb(204, 0, 0) !important;
+    margin: 0px 20px;
+    font-size: 24px !important;
+    font-weight: bold;
+    transition: 1s color;
+}
+
+.nome-da-loja:hover {
+    color: rgb(156, 0, 0);
+}
+
+.badge {
+    background-color: rgb(204, 0, 0);
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+header {
+    margin-bottom: 100px;
+}
